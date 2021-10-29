@@ -19,3 +19,13 @@ body
 #start,#status{
     font-size: 22px;
 }
+
+.copyright_footer{
+    position:fixed;
+    background-color: rgb(250, 236, 236);
+    color: rgba(255, 0, 0, 0.151);
+    bottom: 0px;
+    width: 100%;
+    line-height: 3;
+    text-align: center;
+}
