@@ -1,6 +1,10 @@
 
 /*created by prashant shukla */
 
+leftwrist = 0;
+rightwrist = 0;
+scoreRightwrist = 0;
+
 var paddle2 =10,paddle1=10;
 
 var paddle1X = 10,paddle1Height = 110;
@@ -36,8 +40,22 @@ function modelLoaded(){
 	console.log("modelLoaded");
 }
 
+function gotPoses(results){
+   if(results > 0){
+     console.log(results);
+     rightwrist = results[0].pose.rightwrist.x;
+     rightwrist = results[0].pose.rightwrist.y;
+     scoreRightwrist = results[0].pose.scoreRightwrist;
+   }
+}
 
 function draw(){
+
+  if(scoreRightwrist > 0.2){
+    fill("red");
+    stroke("red");
+    circle(length.results[0].pose.rightwrist.x , length.results[0].pose.rightwrist.y , 3);
+    }
 
  background(0); 
 
